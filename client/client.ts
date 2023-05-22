@@ -40,12 +40,12 @@ on("gameEventTriggered", (name: "CEventNetworkEntityDamage" | "", args: string[]
     // if more than 2 tires are popped, set vehicle engine health to 0
 
     if (poppedTires === 1) {
-      console.log("[popped-tire-debuff] setting engine health to 100")
+      console.log("[popped-tire-debuff] setting engine health to", settings.damageOnePop)
       SetVehicleEngineHealth(Number(target), settings.damageOnePop)
     }
 
     if (poppedTires >= 2) {
-      console.log("[popped-tire-debuff] setting engine health to 0")
+      console.log("[popped-tire-debuff] setting engine health to", settings.damageTwoPops, "and turning off engine")
       SetVehicleEngineHealth(Number(target), settings.damageTwoPops)
       SetVehicleEngineOn(Number(target), false, true, true)
     }
