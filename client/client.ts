@@ -1,6 +1,6 @@
 console.log("[popped-tire-debuff] Client Resource Started")
 
-exports("poppedTireDebuff:setSettings", SetSettings)
+globalThis.exports("poppedTireDebuff:setSettings", SetSettings)
 
 const settings = {
   damageOnePop: 100,
